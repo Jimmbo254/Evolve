@@ -6,9 +6,19 @@ import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
+import com.evolve.app.data.AppContainer
 
-/** Configura Coil para que pueda mostrar los GIFs de ejercicios que vengan de la API. */
+/** Configura Coil para los GIFs y arma el contenedor de dependencias. */
 class EvolveApplication : Application(), ImageLoaderFactory {
+
+    lateinit var container: AppContainer
+        private set
+
+    override fun onCreate() {
+        super.onCreate()
+        container = AppContainer(this)
+    }
+
     override fun newImageLoader(): ImageLoader =
         ImageLoader.Builder(this)
             .components {
