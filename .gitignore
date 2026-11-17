@@ -1,10 +1,13 @@
 *.iml
 .gradle
-/local.properties
-/.idea
+local.properties
+.idea/
 .DS_Store
-/build
+build/
 /captures
 .externalNativeBuild
 .cxx
-app/build
+
+# Documentos de trabajo locales
+context/
+GUIA-API-EVOLVE.md
