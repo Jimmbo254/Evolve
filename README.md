@@ -1,45 +1,45 @@
 # EVOLVE
 
-**Tu entrenamiento, medido.** EVOLVE es una app de Android para organizar tu rutina de fuerza: armás tu plan semanal, entrenás siguiendo ese plan y ves cómo evoluciona tu progreso con datos reales en lugar de sensaciones.
+**Tu entrenamiento, medido.** EVOLVE es una app de Android para organizar tu rutina de fuerza: armas tu plan semanal, entrenas siguiendo ese plan y ves cómo evoluciona tu progreso con datos reales en lugar de sensaciones.
 
-La app se conecta a un backend propio, así que tu cuenta, tus planes y tus entrenamientos quedan guardados en el servidor y no solo en el teléfono.
+La app se conecta a un backend propio, así que tu cuenta, tus planes y tus entrenamientos quedan guardados en el servidor y no solo en el celular.
 
 ---
 
 ## Qué puedes hacer
 
 ### Crear tu cuenta
-Registrate con nombre, correo y contraseña, o iniciá sesión si ya tenés cuenta. Al abrir la app de nuevo, tu sesión se restaura sola sin volver a escribir la contraseña.
+Regístrate con nombre, correo y contraseña, o inicia sesión si ya tienes cuenta. Al abrir la app de nuevo, tu sesión se restaura sola sin volver a escribir la contraseña.
 
 ### Armar tus planes
-Un plan es tu rutina: un nombre, un objetivo y los días de la semana que entrenás. En cada día agregás los ejercicios que vas a hacer, con la cantidad de series, las repeticiones y el descanso entre series. Podés tener varios planes y **activar** el que estés usando en ese momento; el resto queda guardado para después. También podés editarlos o borrarlos (los entrenamientos ya registrados no se pierden).
+Un plan es tu rutina: un nombre, un objetivo y los días de la semana que entrenas. En cada día agregas los ejercicios que vas a hacer, con la cantidad de series, las repeticiones y el descanso entre series. Puedes tener varios planes y **activar** el que estés usando en ese momento; el resto queda guardado para después. También puedes editarlos o borrarlos (los entrenamientos ya registrados no se pierden).
 
 ### Entrenar
-La pestaña **Entrenar** te muestra qué te toca hoy según el plan activo. Al empezar, se abre una sesión de entrenamiento donde registrás cada serie: cuánto peso levantaste y cuántas repeticiones hiciste. Si te olvidaste un ejercicio, lo agregás sobre la marcha. Si cerraste la app a mitad del entrenamiento, al volver podés **reanudarlo** en el mismo punto. Cuando terminás, la sesión se cierra y pasa a tu historial de progreso.
+La pestaña **Entrenar** te muestra qué te toca hoy según el plan activo. Al empezar, se abre una sesión de entrenamiento donde registras cada serie: cuánto peso levantaste y cuántas repeticiones hiciste. Si te olvidaste un ejercicio, lo agregas sobre la marcha. Si cerraste la app a mitad del entrenamiento, al volver puedes **reanudarlo** en el mismo punto. Cuando terminas, la sesión se cierra y pasa a tu historial de progreso.
 
 ### Explorar ejercicios
-Un catálogo con los ejercicios disponibles, con su grupo muscular, el equipamiento que necesitás, una animación de cómo se hace y los pasos explicados. Podés buscar por nombre o filtrar por músculo para encontrar variantes cuando el plan se queda corto.
+Un catálogo con los ejercicios disponibles, con su grupo muscular, el equipamiento que necesitas, una animación de cómo se hace y los pasos explicados. Puedes buscar por nombre o filtrar por músculo para encontrar variantes cuando el plan se queda corto.
 
 ### Ver tu progreso
-La pantalla de progreso resume lo importante de tu semana: cuántos días seguidos llevás entrenando, cuántos entrenamientos hiciste, cuánto volumen total moviste y cuántos récords personales nuevos lograste. El volumen se muestra día por día, y al final tenés la lista de tus mejores marcas por ejercicio.
+La pantalla de progreso resume lo importante de tu semana: cuántos días seguidos llevas entrenando, cuántos entrenamientos hiciste, cuánto volumen total moviste y cuántos récords personales nuevos lograste. El volumen se muestra día por día, y al final tienes la lista de tus mejores marcas por ejercicio.
 
 ### Ajustar tu perfil
-Cargá tu peso, estatura, objetivo y nivel para que el entrenamiento tenga contexto. Desde ahí también cerrás sesión.
+Carga tu peso, estatura, objetivo y nivel para que el entrenamiento tenga contexto. Desde ahí también cierras sesión.
 
 ---
 
 ## Cómo se usa en la práctica
 
-1. Instalá la app y creá tu cuenta.
-2. Andá a **Planes**, tocá el botón **+** y armá tu rutina de la semana.
-3. Activá el plan. La pestaña **Entrenar** ya te va a mostrar el día que corresponde.
-4. Entrená y anotá cada serie. Al finalizar, revisá **Progreso** para ver el avance.
+1. Instala la app y crea tu cuenta.
+2. Entra a **Planes**, toca el botón **+** y arma tu rutina de la semana.
+3. Activa el plan. La pestaña **Entrenar** ya te muestra el día que corresponde.
+4. Entrena y anota cada serie. Al finalizar, revisa **Progreso** para ver el avance.
 
 ---
 
 ## Tus datos
 
-- La contraseña nunca se guarda en el teléfono.
+- La contraseña nunca se guarda en el celular.
 - Los tokens de acceso se almacenan **cifrados** con el Keystore de Android.
 - El token de acceso se renueva automáticamente cuando vence, sin interrumpirte.
 - Al cerrar sesión se borran los tokens del dispositivo y se avisa al servidor.
@@ -56,7 +56,7 @@ Cargá tu peso, estatura, objetivo y nivel para que el entrenamiento tenga conte
 - Un dispositivo o emulador con **Android 8.0 (API 26)** o superior
 - `local.properties` apuntando a tu SDK (`sdk.dir=...`); Android Studio lo genera solo
 
-### Compilar y correr
+### Compilar y ejecutar
 
 ```bash
 # Windows
@@ -112,7 +112,7 @@ app/src/main/java/com/evolve/app/
 
 La URL de la API está en `app/src/main/java/com/evolve/app/data/api/ApiConfig.kt`. El backend vive en Render, cuyo plan gratuito **duerme** tras un rato sin uso: la primera petición del día puede tardar hasta un minuto en responder. Por eso el cliente espera hasta 90 segundos y, si no hay red o el servidor está despertando, mantiene tu sesión en lugar de cerrarla.
 
-Si el backend cambia de dirección, alcanza con editar esa constante y volver a compilar.
+Si el backend cambia de dirección, basta con editar esa constante y volver a compilar.
 
 ### Detalles de interfaz
 
