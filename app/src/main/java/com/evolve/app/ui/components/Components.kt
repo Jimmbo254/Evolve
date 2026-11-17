@@ -70,9 +70,15 @@ fun StatCard(
 }
 
 @Composable
-fun PrimaryButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
+fun PrimaryButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true
+) {
     Button(
         onClick = onClick,
+        enabled = enabled,
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
         colors = ButtonDefaults.buttonColors(
